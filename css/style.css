@@ -1,0 +1,326 @@
+.vector-icon {
+    position: absolute;
+    height: 46%;
+    width: 5.91%;
+    top: 26%;
+    right: 90.45%;
+    bottom: 28%;
+    left: 3.64%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .div {
+    position: absolute;
+    top: 0%;
+    left: 87.95%;
+  }
+  .vector-parent {
+    position: absolute;
+    top: 0px;
+    left: 13px;
+    background-color: var(--color-gray-100);
+    width: 440px;
+    height: 50px;
+    overflow: hidden;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-jockey-one);
+  }
+  .victory-vibes {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .victory-vibes-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 114px;
+    height: 36px;
+  }
+  .group-wrapper {
+    position: absolute;
+    top: 7px;
+    left: 176px;
+    width: 114px;
+    height: 36px;
+    font-size: var(--font-size-17xl);
+    color: var(--color-cadetblue);
+  }
+  .photo-2025-01-24-173110-1 {
+    position: absolute;
+    top: 50px;
+    left: 13px;
+    width: 440px;
+    height: 160px;
+    object-fit: cover;
+  }
+  .welcome-to-victory {
+    margin: 0;
+  }
+  .welcome-to-victory-container {
+    position: absolute;
+    top: 72px;
+    left: 78px;
+    font-size: var(--font-size-17xl);
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    width: 310px;
+    height: 72px;
+    text-shadow: var(--m3-elevation-light-5);
+  }
+  .registration {
+    position: relative;
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  }
+  .registration-wrapper {
+    position: absolute;
+    top: 166px;
+    left: 183px;
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #29292d;
+    border: 1px solid var(--miscellaneous-keyboard-accessory-bar-selection);
+    box-sizing: border-box;
+    width: 100px;
+    height: 38px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+  }
+  
+  .start-wrapper {
+    position: absolute;
+    top: 911px;
+    left: calc(50% - 83.5px);
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-31xl);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #29292d;
+    border: 1px solid var(--miscellaneous-keyboard-accessory-bar-selection);
+    box-sizing: border-box;
+    width: 179px;
+    height: 38px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+  }
+  .iphone-15-icon {
+    position: absolute;
+    top: 173px;
+    left: 0px;
+    width: 200px;
+    height: 217px;
+    object-fit: cover;
+  }
+  .for-begginers-thanks-container {
+    position: absolute;
+    top: 224px;
+    left: 230px;
+    font-size: var(--font-size-17xl);
+    color: var(--color-gray-100);
+    display: inline-block;
+    width: 218px;
+    height: 157px;
+  }
+  .step-1 {
+    position: absolute;
+    top: 408px;
+    left: 29px;
+    font-size: var(--font-size-13xl);
+    text-align: center;
+    display: inline-block;
+    width: 56px;
+    height: 13px;
+  }
+  .follow-the-link-container {
+    position: absolute;
+    top: 437px;
+    left: 93px;
+    font-family: var(--font-jost);
+    display: inline-block;
+    width: 344px;
+    height: 99px;
+  }
+  .step-2 {
+    position: absolute;
+    top: 651px;
+    left: 28px;
+    font-size: var(--font-size-13xl);
+    text-align: center;
+    display: inline-block;
+    width: 64px;
+    height: 14px;
+  }
+  .step-3 {
+    position: absolute;
+    top: 765px;
+    left: 29px;
+    font-size: var(--font-size-13xl);
+    text-align: center;
+    display: inline-block;
+    width: 64px;
+    height: 14px;
+  }
+  .join-us-and-container {
+    position: absolute;
+    top: 556px;
+    left: 92px;
+    font-family: var(--font-jost);
+    display: inline-block;
+    width: 322px;
+    height: 73px;
+  }
+  .after-registering-log-container {
+    position: absolute;
+    top: 671px;
+    left: 92px;
+    font-family: var(--font-jost);
+    display: inline-block;
+    width: 318px;
+    height: 78px;
+  }
+  .place-bets-that-container {
+    position: absolute;
+    top: 795px;
+    left: 93px;
+    font-family: var(--font-jost);
+    display: inline-block;
+    width: 341px;
+    height: 74px;
+  }
+  .frame-parent {
+    position: absolute;
+    top: 0px;
+    left: -13px;
+    width: 453px;
+    height: 949px;
+  }
+  .general-child {
+    position: absolute;
+    top: 1009px;
+    left: 0px;
+    width: 440px;
+    height: 57px;
+    overflow: hidden;
+  }
+  .basilinstagram-solid-icon {
+    position: absolute;
+    top: 1026px;
+    left: 56px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .general {
+    width: 100%;
+    position: relative;
+    background-color: #d5e3cd;
+    height: 1066px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    font-family: var(--font-jomhuria);
+  }
+  
+  .victory-vibes1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .victory-vibes-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 76px;
+    height: 24px;
+  }
+  .menu-inner {
+    position: absolute;
+    top: 54px;
+    left: 10px;
+    width: 76px;
+    height: 24px;
+    color: var(--color-cadetblue);
+    font-family: var(--font-jomhuria);
+  }
+  .vector-icon1 {
+    position: absolute;
+    height: 1.41%;
+    width: 5.36%;
+    top: 5.07%;
+    right: 4.64%;
+    bottom: 93.53%;
+    left: 90%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .instructions {
+    position: absolute;
+    top: 96px;
+    left: 10px;
+    cursor: pointer;
+  }
+  .contacts {
+    position: absolute;
+    top: 147px;
+    left: 10px;
+    cursor: pointer;
+  }
+  .results {
+    position: absolute;
+    top: 198px;
+    left: 13px;
+  }
+  .forecasts {
+    position: absolute;
+    top: 253px;
+    left: 10px;
+  }
+  .start1 {
+    position: absolute;
+    top: 304px;
+    left: 10px;
+  }
+  .mingcutetelegram-fill-icon {
+    position: absolute;
+    top: 359px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .basilinstagram-solid-icon1 {
+    position: absolute;
+    top: 359px;
+    left: 50px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .menu {
+    width: 280px;
+    position: relative;
+    background-color: #1d1d20;
+    height: 1066px;
+    overflow: hidden;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-jost);
+  }
+  

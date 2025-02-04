@@ -1,0 +1,20 @@
+{
+  "locofyConfig": {
+    "project": "Victory vibe - 1",
+    "id": "2sJ8DGLax65Wx41cC9d7KQeKqdf",
+    "framework": "html-css",
+    "typescript": false,
+    "styling": "CSS",
+    "unit": "px",
+    "naming": "Kebab Case",
+    "path": "public/",
+    "componentsPath": "/Users/user/Desktop/Victore vibes/src/components",
+    "screensPath": "/Users/user/Desktop/Victore vibes/src/pages"
+  }
+}
+
+{
+  "liveServer.settings.wait": 0, 
+  "liveServer.settings.fullReload": true,
+  "liveServer.settings.useBrowserPreview": false
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacts - Victory Vibes</title>
+  
+  <!-- Підключення (необов’язково) глобальних стилів -->
+  <link rel="stylesheet" href="../css/global.css" />
+  <!-- Стилі для сторінки Contacts -->
+  <link rel="stylesheet" href="./contacts.css" />
+
+  <!-- Google Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jomhuria:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jockey+One:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+  />
+</head>
+<body>
+  <!-- Основний контейнер -->
+  <div class="contacts-page">
+    <!-- Хедер із бургер-іконкою -->
+    <header class="header">
+      <img class="burger-icon" id="burgerIcon" src="../public/vector.svg" alt="Menu" />
+      <!-- Лого Victory Vibes, перехід на головну -->
+      <a href="../index.html" class="header-link">
+        <h1 class="header-title">Victory Vibes</h1>
+      </a>
+    </header>
+    
+    <!-- Основний контент -->
+    <main class="main-content">
+      <h2 class="contacts-heading">Contacts</h2>
+      <p class="intro-text">
+        Join our team!  <br />
+        Here you can find all the ways to contact us.
+      </p>
+
+      <!-- Дві великі кнопки: Instagram і Telegram -->
+      <div class="social-buttons">
+        <!-- Кнопка Instagram -->
+        <button class="icon-labels instagram-btn">
+          <div class="icon-pair">
+            <img class="icon-img" alt="Instagram" src="../public/basilinstagramsolid.svg" />
+          </div>
+          <a
+            href="https://www.instagram.com/v1ctory_v1bes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram-text"
+          >
+            Instagram
+          </a>
+        </button>
+
+        <!-- Кнопка Telegram -->
+        <button class="icon-labels telegram-btn">
+          <div class="icon-pair">
+            <img class="icon-img" alt="Telegram" src="../public/mingcutetelegramfill.svg" />
+          </div>
+          <a
+            href="https://t.me/+fLBJs5it6zFmM2Uy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="telegram-text"
+          >
+            Telegram
+          </a>
+        </button>
+      </div>
+    </main>
+
+    <!-- Футер з іконками соцмереж -->
+    <footer class="footer">
+      <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank">
+        <img class="social-icon" src="../public/mingcutetelegramfill.svg" alt="Telegram" />
+      </a>
+      <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank">
+        <img class="social-icon" src="../public/basilinstagramsolid.svg" alt="Instagram" />
+      </a>
+    </footer>
+  </div>
+
+  <!-- Меню зліва (з абсолютними координатами) -->
+  <div class="menu" id="menu">
+    <!-- Хрестик -->
+    <div class="close-btn" id="menuClose">×</div>
+    
+    <div class="menu-inner">
+      <div class="victory-vibes-container">
+        <!-- Слово "Victory Vibes" в один рядок -->
+        <div class="victory-vibes1" style="white-space: nowrap;">Victory Vibes</div>
+      </div>
+    </div>
+    
+    <!-- Пункти меню -->
+    <a class="instructions" href="../instructions/instructions.html">Instructions</a>
+    <a class="contacts" href="./contacts.html">Contacts</a>
+    <div class="results">Results</div>
+    <div class="forecasts">Forecasts</div>
+    <div class="start1">Start</div>
+    
+    <!-- Іконки Telegram / Instagram -->
+    <img class="mingcutetelegram-fill-icon" alt="Telegram" src="../public/mingcutetelegramfill.svg" />
+    <img class="basilinstagram-solid-icon1" alt="Instagram" src="../public/basilinstagramsolid.svg" />
+  </div>
+
+  <!-- JS: відкривання/закривання меню -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const burgerIcon = document.getElementById("burgerIcon");
+      const menu = document.getElementById("menu");
+      const closeBtn = document.getElementById("menuClose");
+
+      if (burgerIcon && menu && closeBtn) {
+        burgerIcon.addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

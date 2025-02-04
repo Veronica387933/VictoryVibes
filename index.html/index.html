@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Victory Vibes</title>
+  
+  <!-- Підключення стилів -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jockey+One:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jomhuria:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap">
+  
+  <!-- Додаткові стилі для бургер-меню -->
+  <style>
+    /* popup-overlay */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+    }
+    .popup-overlay.active {
+      display: block;
+    }
+    .popup-overlay .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #000;
+      color: #fff;
+      width: 250px;
+      height: 100%;
+      z-index: 1001;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .popup-overlay .menu a,
+    .popup-overlay .menu div,
+    .popup-overlay .menu p {
+      color: #fff;
+      text-decoration: none; /* Прибрати підкреслення */
+    }
+    .popup-overlay .menu .victory-vibes1 {
+      color: #4BA298;
+    }
+    .popup-overlay .menu .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    /* Приклад стилю для футера (якщо треба) */
+    .footer {
+      background: #29292D;
+      display: flex;
+      justify-content: center; /* або flex-start */
+      gap: 20px;
+      padding: 10px 0;
+      position: absolute; /* якщо хочете зафіксувати внизу */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .footer img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="general">
+    <div class="frame-parent">
+      <div class="vector-parent">
+        <!-- Бургер-іконка -->
+        <img class="vector-icon" id="vectorIcon" alt="Бургер меню" src="../public/vector.svg">
+      </div>
+      <div class="group-wrapper">
+        <div class="victory-vibes-wrapper">
+          <div class="victory-vibes">Victory Vibes</div>
+        </div>
+      </div>
+      <img class="photo-2025-01-24-173110-1" alt="" src="../public/photo-20250124-173110-1@2x.png" />
+      <div class="welcome-to-victory-container">
+        <p class="welcome-to-victory">Welcome to Victory Vibes</p>
+        <p class="welcome-to-victory">We will help you get out of poverty</p>
+      </div>
+
+      <!-- Кнопки Registration та START -->
+      <div class="registration-wrapper">
+        <div class="registration">Registration</div>
+      </div>
+      <div class="start-wrapper">
+        <div class="registration">START</div>
+      </div>
+      
+      <img class="iphone-15-icon" alt="" src="../public/iphone-15@2x.png" />
+
+      <!-- Інші елементи -->
+      <button id="registration">Registration</button>
+      <button id="start">START</button>
+      <div class="for-begginers-thanks-container">
+        <p class="welcome-to-victory">For Begginers</p>
+        <p class="welcome-to-victory">Thanks for joining !</p>
+        <p class="welcome-to-victory">
+          Its very easy to get started with our team
+        </p>
+      </div>
+      <div class="step-1">STEP 1</div>
+      <div class="follow-the-link-container">
+        <p class="welcome-to-victory">Follow the link below</p>
+        <p class="welcome-to-victory">and register for free with a</p>
+        <p class="welcome-to-victory">bookmaker.</p>
+        <p class="welcome-to-victory">pakistanasiafb.velfora.com</p>
+      </div>
+      <div class="step-2">STEP 2</div>
+      <div class="step-3">STEP 3</div>
+      <div class="join-us-and-container">
+        <p class="welcome-to-victory">Join us and receive a 120% bonus</p>
+        <p class="welcome-to-victory">on the 1st deposit up to 30000 PKR!</p>
+        <p class="welcome-to-victory">By promo code - PAKIBET</p>
+      </div>
+      <div class="after-registering-log-container">
+        <p class="welcome-to-victory">After registering, log in</p>
+        <p class="welcome-to-victory">and deposit money. The money you</p>
+        <p class="welcome-to-victory">deposit is for the purpose of placing bets.</p>
+      </div>
+      <div class="place-bets-that-container">
+        <p class="welcome-to-victory">Place bets that we post</p>
+        <p class="welcome-to-victory">on the telegram channel.</p>
+        <p class="welcome-to-victory">pakistanasiafb.velfora.com</p>
+      </div>
+    </div>
+    <!-- Іконка Instagram видалена або лишайте, якщо потрібна 
+         Іконка Telegram під телефоном теж видалена -->
+
+    <!-- Футер з іконками соцмереж (клікабельний, внизу) -->
+    <footer class="footer">
+      <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank" rel="noopener noreferrer">
+        <img class="mingcutetelegram-fill-icon" alt="Telegram" src="../public/mingcutetelegramfill.svg" />
+      </a>
+      <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank" rel="noopener noreferrer">
+        <img class="basilinstagram-solid-icon" alt="Instagram" src="../public/basilinstagramsolid.svg" />
+      </a>
+    </footer>
+  </div>
+  
+  <!-- Popup overlay з меню -->
+  <div id="menuContainer" class="popup-overlay">
+    <div class="menu">
+      <div class="close-btn">&times;</div>
+      <div class="menu-inner">
+        <div class="victory-vibes-container">
+          <div class="victory-vibes1">Victory Vibes</div>
+        </div>
+      </div>
+
+      <!-- Клікабельний пункт: Instructions -->
+      <a class="instructions" id="popupinstructionsText" href="../instructions/instructions.html">
+        Instructions
+      </a>
+      <!-- Клікабельний пункт: Contacts -->
+      <a class="contacts" id="popupcontactsText" href="../contacts/contacts.html">
+        Contacts
+      </a>
+      
+      <div class="results">Results</div>
+      <div class="forecasts">Forecasts</div>
+      <!-- "Start" -->
+      <div class="start1">Start</div>
+
+      <!-- Іконки соцмереж (пр. Telegram, Instagram) у меню 
+           Можна так само обгорнути в <a> -->
+      <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank">
+        <img class="mingcutetelegram-fill-icon" alt="Telegram" src="../public/mingcutetelegramfill.svg" />
+      </a>
+      <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank">
+        <img class="basilinstagram-solid-icon1" alt="Instagram" src="../public/basilinstagramsolid.svg" />
+      </a>
+    </div>
+  </div>
+  
+  <!-- JS для бургер-меню -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const hamburger = document.getElementById("vectorIcon");
+      const menuOverlay = document.getElementById("menuContainer");
+      const menu = menuOverlay.querySelector(".menu");
+      const closeBtn = menu.querySelector(".close-btn");
+
+      if (!hamburger || !menuOverlay || !menu || !closeBtn) {
+        console.error("❌ Error: One of the elements was not found!");
+        return;
+      }
+
+      hamburger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menuOverlay.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menuOverlay.classList.remove("active");
+      });
+
+      menuOverlay.addEventListener("click", function(e) {
+        if (!menu.contains(e.target)) {
+          menuOverlay.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  
+  <!-- JS для кнопок -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var registrationBtn = document.querySelector(".registration-wrapper .registration");
+      var startBtn = document.querySelector(".start-wrapper .registration");
+
+      if (registrationBtn) {
+        registrationBtn.addEventListener("click", function() {
+          window.location.href = "http://pakistanasiafb.velfora.com";
+        });
+      }
+      if (startBtn) {
+        startBtn.addEventListener("click", function() {
+          window.location.href = "http://pakistanasiafb.velfora.com";
+        });
+      }
+      
+      var burgerStart = document.querySelector(".menu .start1");
+      if (burgerStart) {
+        burgerStart.addEventListener("click", function() {
+          window.location.href = "http://pakistanasiafb.velfora.com";
+        });
+      }
+    });
+  </script>
+</body>
+</html>

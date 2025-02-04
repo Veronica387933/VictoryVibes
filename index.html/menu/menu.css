@@ -1,0 +1,104 @@
+.victory-vibes1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #4BA298; 
+    font-family: "Jomhuria"; 
+    font-size: 24px; 
+}
+  
+  .victory-vibes-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 76px;
+    height: 24px;
+  }
+  .menu-inner {
+    position: absolute;
+    top: 54px;
+    left: 10px;
+    width: 76px;
+    height: 24px;
+    color: white;
+    font-family: "Jost";
+  }
+  .vector-icon1 {
+    position: absolute;
+    height: 1.41%;
+    width: 5.36%;
+    top: 5.07%;
+    right: 4.64%;
+    bottom: 93.53%;
+    left: 90%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .instructions {
+    position: absolute;
+    top: 96px;
+    left: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Jost";
+  }
+  .contacts {
+    position: absolute;
+    top: 147px;
+    left: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Jost";
+  }
+  .results {
+    position: absolute;
+    top: 198px;
+    left: 10px;
+    color: #ffffff;
+    font-family: "Jost";
+  }
+  .forecasts {
+    position: absolute;
+    top: 253px;
+    left: 10px;
+    color: #ffffff;
+    font-family: "Jost";
+  }
+  .start1 {
+    position: absolute;
+    top: 304px;
+    left: 10px;
+    color: #ffffff;
+    font-family: "Jost";
+  }
+  .mingcutetelegram-fill-icon {
+    position: absolute;
+    top: 359px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .basilinstagram-solid-icon1 {
+    position: absolute;
+    top: 359px;
+    left: 50px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .menu {
+    width: 280px;
+    position: relative;
+    background-color: #1d1d20;
+    height: 1066px;
+    overflow: hidden;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-jost);
+  }
+  
