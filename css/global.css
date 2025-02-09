@@ -1,38 +1,149 @@
-body {
-  margin: 0;
-  line-height: normal;
-}
-
-.popup-overlay {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  inset: 0;
-}
-
+/* Root variables remain the same, but let's add some responsive values */
 :root {
-  /* fonts */
+  /* Your existing variables */
   --font-jost: Jost;
   --font-jomhuria: Jomhuria;
   --font-jockey-one: "Jockey One";
-
-  /* font sizes */
-  --font-size-base: 16px;
-  --font-size-13xl: 32px;
-  --font-size-17xl: 36px;
-  --font-size-5xl: 24px;
-
-  /* Colors */
+  
+  /* Responsive font sizes using clamp for smooth scaling */
+  --font-size-base: clamp(14px, 2vw, 16px);
+  --font-size-13xl: clamp(24px, 4vw, 32px);
+  --font-size-17xl: clamp(28px, 5vw, 36px);
+  --font-size-5xl: clamp(20px, 3vw, 24px);
+  
+  /* Your existing colors */
   --color-black: #000;
   --color-gray-100: #29292d;
   --miscellaneous-keyboard-accessory-bar-selection: #ebedf0;
   --color-white: #fff;
   --color-cadetblue: #4ba298;
-
-  /* Border radiuses */
+  
+  /* Your existing border radius */
   --br-31xl: 50px;
-
-  /* Effects */
+  
+  /* Your existing effects */
   --m3-elevation-light-5: 1px 0 0 #29292d, 0 1px 0 #29292d, -1px 0 0 #29292d,
     0 -1px 0 #29292d;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: var(--font-jost);
+  font-size: var(--font-size-base);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Popup overlay with improved mobile handling */
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  body {
+    font-size: calc(var(--font-size-base) * 0.9);
+  }
+  
+  .popup-overlay {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Adjustments for tablets */
+  body {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Adjustments for desktop */
+  body {
+    font-size: calc(var(--font-size-base) * 1.1);
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Safe area insets for modern mobile devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+    padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch-friendly interactive elements */
+button,
+[type="button"],
+[type="submit"] {
+  cursor: pointer;
+  min-height: 44px; /* Minimum touch target size */
+  padding: 0.5rem 1rem;
+}
+
+/* Improved accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
