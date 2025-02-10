@@ -1,6 +1,6 @@
 /* Header styles */
 .vector-parent {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 440px;
@@ -44,13 +44,18 @@
   left: 87.95%;
 }
 
+/* Приховуємо зайві кнопки */
+#registration,
+#start {
+  display: none;
+}
+
 .photo-2025-01-24-173110-1 {
-  position: absolute;
-  top: 50px;
-  left: 13px;
+  position: relative;
   width: 440px;
   height: 160px;
   object-fit: cover;
+  margin: 0;
 }
 
 .welcome-to-victory {
@@ -185,6 +190,7 @@
   display: inline-block;
   width: 344px;
   height: 99px;
+  font-size: 18px;
 }
 
 .step-2 {
@@ -217,6 +223,7 @@
   display: inline-block;
   width: 322px;
   height: 73px;
+  font-size: 18px;
 }
 
 .after-registering-log-container {
@@ -228,6 +235,7 @@
   font-family: var(--font-jost);
   display: inline-block;
   line-height: normal;
+  font-size: 18px;
 }
 
 .place-bets-that-container {
@@ -238,37 +246,20 @@
   display: inline-block;
   width: 341px;
   height: 74px;
+  font-size: 18px;
 }
 
 /* Layout elements */
 .frame-parent {
-  position: absolute;
-  top: 0px;
-  left: -13px;
-  width: 453px;
+  position: relative;
+  width: 440px;
+  margin: 0;
+  padding: 0;
   height: 949px;
 }
 
-.general-child {
-  position: absolute;
-  top: 1009px;
-  left: 0px;
-  width: 440px;
-  height: 57px;
-  overflow: hidden;
-}
-
-.basilinstagram-solid-icon {
-  position: absolute;
-  top: 1026px;
-  left: 56px;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-}
-
 .general {
-  width: 100%;
+  width: 440px;
   position: relative;
   background-color: #d5e3cd;
   height: 1066px;
@@ -277,6 +268,7 @@
   font-size: var(--font-size-base);
   color: var(--color-black);
   font-family: var(--font-jomhuria);
+  margin-left: 0;
 }
 
 /* Menu styles */
@@ -304,19 +296,6 @@
   height: 24px;
   color: var(--color-cadetblue);
   font-family: var(--font-jomhuria);
-}
-
-.vector-icon1 {
-  position: absolute;
-  height: 1.41%;
-  width: 5.36%;
-  top: 5.07%;
-  right: 4.64%;
-  bottom: 93.53%;
-  left: 90%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
 }
 
 .instructions {
@@ -384,19 +363,22 @@
   padding: 20px;
 }
 
-/* Footer styles */
+/* Футер */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 440px;
   background-color: var(--color-footer);
   padding: 10px 16px;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  z-index: 90;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
 }
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
 
 .social-icon {
   width: 24px;

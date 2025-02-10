@@ -70,16 +70,16 @@
       padding: 10px;
     }
     
-    /* Футер, як на інших сторінках */
-    .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 440px; /* фіксована ширина як у макета */
-  background-color: var(--color-footer);
-  padding: 10px 16px;
-  z-index: 90;
-}
+    <footer class="footer">
+      <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank">
+        <img class="social-icon" src="/public/mingcutetelegramfill.svg" alt="Telegram" />
+      </a>
+      <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank">
+        <img class="social-icon" src="/public/basilinstagramsolid.svg" alt="Instagram" />
+      </a>
+    </footer>
+  </div>
+
     
     /* Мобільна адаптація */
     @media (max-width: 768px) {
@@ -98,7 +98,7 @@
       .popup-overlay .menu {
         flex-direction: column;
       }
-    }
+    } 
   </style>
 </head>
 
@@ -181,7 +181,7 @@
       <div class="close-btn">&times;</div>
       
       <!-- Клікабельні пункти меню -->
-      <a class="instructions" href="/Instructions/instructions.html">Instructions</a>
+      <a class="instructions" href="file:///path/to/instructions.html">Instructions</a>
       <a class="contacts" id="popupcontactsText" href="../contacts/contacts.html">Contacts</a>
       <div class="results">Results</div>
       <div class="forecasts">Forecasts</div>
