@@ -1,53 +1,48 @@
-vector-icon {
-  position: absolute;
-  height: 46%;
-  width: 5.91%;
-  top: 26%;
-  right: 90.45%;
-  bottom: 28%;
-  left: 3.64%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
+/* Header styles */
+.vector-parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 440px;
+  height: 50px;
+  background-color: var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 }
+
+.vector-icon {
+  position: absolute;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.group-wrapper {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.victory-vibes-wrapper {
+  width: auto;
+}
+
+.victory-vibes {
+  color: var(--color-cadetblue);
+  font-family: var(--font-jomhuria);
+  font-size: 36px;
+}
+
+/* Original styles */
 .div {
   position: absolute;
   top: 0%;
   left: 87.95%;
 }
-.vector-parent {
-  position: absolute;
-  top: 0px;
-  left: 13px;
-  background-color: var(--color-gray-100);
-  width: 440px;
-  height: 50px;
-  overflow: hidden;
-  font-size: var(--font-size-5xl);
-  color: var(--color-white);
-  font-family: var(--font-jockey-one);
-}
-.victory-vibes {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.victory-vibes-wrapper {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 114px;
-  height: 36px;
-}
-.group-wrapper {
-  position: absolute;
-  top: 7px;
-  left: 176px;
-  width: 114px;
-  height: 36px;
-  font-size: var(--font-size-17xl);
-  color: var(--color-cadetblue);
-}
+
 .photo-2025-01-24-173110-1 {
   position: absolute;
   top: 50px;
@@ -56,9 +51,13 @@ vector-icon {
   height: 160px;
   object-fit: cover;
 }
+
 .welcome-to-victory {
   margin: 0;
+  line-height: 0.9;
 }
+
+/* Для заголовків залишаємо зменшений line-height */
 .welcome-to-victory-container {
   position: absolute;
   top: 72px;
@@ -70,11 +69,33 @@ vector-icon {
   width: 310px;
   height: 72px;
   text-shadow: var(--m3-elevation-light-5);
+  line-height: 0.9;
 }
+
+.for-begginers-thanks-container {
+  position: absolute;
+  top: 224px;
+  left: 200px;
+  font-size: var(--font-size-17xl);
+  color: var(--color-gray-100);
+  display: inline-block;
+  width: 218px;
+  height: 157px;
+  line-height: 0.9;
+}
+
+.follow-the-link-container,
+.after-registering-log-container,
+.join-us-and-container,
+.place-bets-that-container {
+  line-height: normal;
+}
+
 .registration {
   position: relative;
   text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
 }
+
 .registration-wrapper {
   position: absolute;
   top: 166px;
@@ -115,6 +136,7 @@ vector-icon {
   font-size: var(--font-size-5xl);
   color: var(--color-white);
 }
+
 .iphone-15-icon {
   position: absolute;
   top: 173px;
@@ -123,16 +145,7 @@ vector-icon {
   height: 217px;
   object-fit: cover;
 }
-.for-begginers-thanks-container {
-  position: absolute;
-  top: 224px;
-  left: 230px;
-  font-size: var(--font-size-17xl);
-  color: var(--color-gray-100);
-  display: inline-block;
-  width: 218px;
-  height: 157px;
-}
+
 .step-1 {
   position: absolute;
   top: 408px;
@@ -143,6 +156,7 @@ vector-icon {
   width: 56px;
   height: 13px;
 }
+
 .follow-the-link-container {
   position: absolute;
   top: 437px;
@@ -152,6 +166,7 @@ vector-icon {
   width: 344px;
   height: 99px;
 }
+
 .step-2 {
   position: absolute;
   top: 651px;
@@ -162,6 +177,7 @@ vector-icon {
   width: 64px;
   height: 14px;
 }
+
 .step-3 {
   position: absolute;
   top: 765px;
@@ -172,6 +188,7 @@ vector-icon {
   width: 64px;
   height: 14px;
 }
+
 .join-us-and-container {
   position: absolute;
   top: 556px;
@@ -181,15 +198,18 @@ vector-icon {
   width: 322px;
   height: 73px;
 }
+
 .after-registering-log-container {
   position: absolute;
-  top: 671px;
+  top: 691px;
   left: 92px;
-  font-family: var(--font-jost);
-  display: inline-block;
   width: 318px;
   height: 78px;
+  font-family: var(--font-jost);
+  display: inline-block;
+  line-height: normal;
 }
+
 .place-bets-that-container {
   position: absolute;
   top: 795px;
@@ -199,6 +219,7 @@ vector-icon {
   width: 341px;
   height: 74px;
 }
+
 .frame-parent {
   position: absolute;
   top: 0px;
@@ -206,6 +227,7 @@ vector-icon {
   width: 453px;
   height: 949px;
 }
+
 .general-child {
   position: absolute;
   top: 1009px;
@@ -214,6 +236,7 @@ vector-icon {
   height: 57px;
   overflow: hidden;
 }
+
 .basilinstagram-solid-icon {
   position: absolute;
   top: 1026px;
@@ -222,6 +245,7 @@ vector-icon {
   height: 24px;
   overflow: hidden;
 }
+
 .general {
   width: 100%;
   position: relative;
@@ -235,60 +259,58 @@ vector-icon {
 }
 
 .victory-vibes1 {
+  color: var(--color-cadetblue);
+  font-family: var(--font-jomhuria);
+  font-size: 24px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 54px;
+  left: 10px;
 }
+
 .victory-vibes-container {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 76px;
+  top: 0;
+  left: 0;
+  width: auto;
   height: 24px;
 }
+
 .menu-inner {
   position: absolute;
   top: 54px;
   left: 10px;
-  width: 76px;
   height: 24px;
   color: var(--color-cadetblue);
   font-family: var(--font-jomhuria);
 }
-.vector-icon1 {
-  position: absolute;
-  height: 1.41%;
-  width: 5.36%;
-  top: 5.07%;
-  right: 4.64%;
-  bottom: 93.53%;
-  left: 90%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
+
+/* Меню пункти - оновлені відступи відносно лого */
 .instructions {
   position: absolute;
   top: 96px;
   left: 10px;
   cursor: pointer;
 }
+
 .contacts {
   position: absolute;
   top: 147px;
   left: 10px;
   cursor: pointer;
 }
+
 .results {
   position: absolute;
   top: 198px;
   left: 13px;
 }
+
 .forecasts {
   position: absolute;
   top: 253px;
   left: 10px;
 }
+
 .start1 {
   position: absolute;
   top: 304px;
@@ -302,6 +324,7 @@ vector-icon {
   height: 24px;
   overflow: hidden;
 }
+
 .basilinstagram-solid-icon1 {
   position: absolute;
   top: 359px;
@@ -310,16 +333,169 @@ vector-icon {
   height: 24px;
   overflow: hidden;
 }
+
 .menu {
-  width: 280px;
-  position: relative;
+  width: 250px; /* оригінальна ширина */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* повна висота екрану */
   background-color: #1d1d20;
-  height: 1066px;
-  overflow: hidden;
-  max-width: 90%;
-  max-height: 90%;
-  text-align: left;
+  overflow-y: auto;
+  z-index: 1001;
   font-size: var(--font-size-5xl);
   color: var(--color-white);
   font-family: var(--font-jost);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  .general {
+    width: 100%;
+    height: auto;
+  }
+
+  .frame-parent {
+    width: 100%;
+    left: 0;
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .vector-parent {
+    width: 100%;
+    left: 0;
+  }
+
+  .photo-2025-01-24-173110-1 {
+    width: 100%;
+    left: 0;
+    height: auto;
+  }
+
+  .welcome-to-victory-container {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc(var(--font-size-17xl) * 0.8);
+  }
+
+  .registration-wrapper,
+  .start-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .iphone-15-icon {
+    width: 180px;
+    height: auto;
+    left: 10px;
+  }
+
+  .for-begginers-thanks-container {
+    left: auto;
+    right: 10px;
+    width: 45%;
+    font-size: calc(var(--font-size-17xl) * 0.8);
+  }
+
+  .step-1,
+  .step-2,
+  .step-3 {
+    left: 20px;
+  }
+
+  .follow-the-link-container,
+  .join-us-and-container,
+  .after-registering-log-container,
+  .place-bets-that-container {
+    width: calc(100% - 80px);
+    left: 60px;
+  }
+
+  .menu {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .general {
+    width: 100%;
+  }
+
+  .frame-parent {
+    width: 100%;
+    left: 0;
+  }
+
+  .photo-2025-01-24-173110-1 {
+    width: 100%;
+    left: 0;
+  }
+
+  .welcome-to-victory-container {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .registration-wrapper,
+  .start-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .iphone-15-icon {
+    left: 40px;
+  }
+
+  .for-begginers-thanks-container {
+    right: 40px;
+    width: 45%;
+  }
+}
+
+/* Footer fix */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Menu improvements */
+.menu.active {
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.close-btn {
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Interactive elements */
+.registration-wrapper,
+.start-wrapper,
+.burger-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.registration-wrapper:hover,
+.start-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.burger-icon:hover {
+  transform: scale(1.1);
 }

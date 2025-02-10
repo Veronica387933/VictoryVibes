@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html>
 <head>
   <meta charset="utf-8">
-  <!-- Мета-тег для адаптивності -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Victory Vibes</title>
   
-  <!-- Підключення зовнішніх стилів (якщо використовуєте окремі CSS-файли) -->
+  <!-- Підключення стилів із відносними шляхами -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -16,113 +15,62 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jomhuria:wght@400&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap">
   
-  <!-- Інлайн-стилі для бургер-меню, адаптивності та футера -->
+  <!-- Додаткові стилі для бургер-меню, адаптивності та футера -->
   <style>
-    :root {
-      --color-white: #ffffff;
-      --color-cadetblue: #4BA298;
-      --color-footer: #29292D;
-      --font-jost: 'Jost', sans-serif;
-      --font-jomhuria: 'Jomhuria', cursive;
-    }
-    
-    /* === Меню (зліва) === */
-    .menu {
-      width: 280px;
-      height: 100vh; /* Меню займає всю висоту екрану */
+    /* popup-overlay */
+    .popup-overlay {
+      display: none;
       position: fixed;
       top: 0;
-      left: -280px;  /* Ховаємо меню поза екраном зліва */
-      background-color: #1d1d20;
-      overflow: hidden;
-      text-align: left;
-      font-size: 28px; /* Один розмір шрифту для всіх пунктів */
-      color: var(--color-white);
-      font-family: var(--font-jost);
-      transition: left 0.3s ease-in-out; /* Плавне виїжджання */
-      z-index: 2000;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
     }
-    .menu.active {
-      left: 0;  /* При додаванні класу active меню виїжджає */
+    .popup-overlay.active {
+      display: block;
     }
-    .menu-inner {
-      position: absolute;
-      top: 54px;
-      left: 10px;
-      width: 76px;
-      height: 24px;
-      color: var(--color-cadetblue);
-      font-family: var(--font-jomhuria);
+    .popup-overlay .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #000;
+      color: #fff;
+      width: 250px;
+      height: 100%;
+      z-index: 1001;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
     }
-    /* Кнопка-хрестик для закриття меню */
-    .close-btn {
+    .popup-overlay .menu a,
+    .popup-overlay .menu div,
+    .popup-overlay .menu p {
+      color: #fff;
+      text-decoration: none;
+    }
+    .popup-overlay .menu .victory-vibes1 {
+      color: #4BA298;
+      white-space: nowrap;
+    }
+    .popup-overlay .menu .close-btn {
       position: absolute;
       top: 10px;
       right: 10px;
       font-size: 24px;
-      cursor: pointer;
-    }
-    /* Абсолютні координати пунктів меню */
-    .instructions {
-      position: absolute;
-      top: 96px;
-      left: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .contacts {
-      position: absolute;
-      top: 147px;
-      left: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .results {
-      position: absolute;
-      top: 198px;
-      left: 13px;
-    }
-    .forecasts {
-      position: absolute;
-      top: 253px;
-      left: 10px;
-    }
-    .start1 {
-      position: absolute;
-      top: 304px;
-      left: 10px;
-    }
-    /* Іконки соцмереж у меню */
-    .mingcutetelegram-fill-icon {
-      position: absolute;
-      top: 359px;
-      left: 10px;
-      width: 24px;
-      height: 24px;
-      overflow: hidden;
-    }
-    .basilinstagram-solid-icon1 {
-      position: absolute;
-      top: 359px;
-      left: 50px;
-      width: 24px;
-      height: 24px;
-      overflow: hidden;
-    }
-    /* "Victory Vibes" у меню має бути в один рядок */
-    .victory-vibes1 {
-      white-space: nowrap;
-    }
-    
-    /* Бургер-іконка – відступ від країв */
-    .burger-icon {
-      margin: 10px;
+      color: #fff;
       cursor: pointer;
     }
     
-    /* Футер (як на сторінці Інструкції) */
+    /* Відступ для бургер-іконки */
+    .vector-parent {
+      padding: 10px;
+    }
+    
+    /* Футер, як на інших сторінках */
     .footer {
       background-color: var(--color-footer);
       padding: 10px 16px;
@@ -139,43 +87,46 @@
       height: 24px;
     }
     
-    /* Адаптивність для вузьких екранів */
+    /* Мобільна адаптація */
     @media (max-width: 768px) {
-      .menu {
-        width: 240px;
-        left: -240px;
+      .welcome-to-victory-container {
+        padding: 0 10px;
       }
-      .menu.active {
-        left: 0;
+      .welcome-to-victory {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
-      .instructions,
-      .contacts,
-      .results,
-      .forecasts,
-      .start1 {
-        font-size: 24px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .popup-overlay .menu {
+        flex-direction: column;
       }
     }
   </style>
 </head>
+
 <body>
-  <!-- Основний контент сторінки -->
   <div class="general">
     <div class="frame-parent">
-      <div class="vector-parent">
-        <!-- Бургер-іконка (відступ завдяки класу burger-icon) -->
-        <img class="vector-icon burger-icon" id="burgerIcon" alt="Бургер меню" src="../public/vector.svg">
-      </div>
-      <div class="group-wrapper">
-        <div class="victory-vibes-wrapper">
-          <div class="victory-vibes">Victory Vibes</div>
+      <!-- Оновлений header -->
+      <header class="vector-parent">
+        <img class="vector-icon" id="vectorIcon" alt="Меню" src="../public/vector.svg">
+        <div class="group-wrapper">
+          <div class="victory-vibes-wrapper">
+            <div class="victory-vibes">Victory Vibes</div>
+          </div>
         </div>
-      </div>
-      <img class="photo-2025-01-24-173110-1" alt="Main Image" src="../public/photo-20250124-173110-1@2x.png">
+      </header>
+
+      <img class="photo-2025-01-24-173110-1" alt="" src="../public/photo-20250124-173110-1@2x.png" />
       <div class="welcome-to-victory-container">
         <p class="welcome-to-victory">Welcome to Victory Vibes</p>
         <p class="welcome-to-victory">We will help you get out of poverty</p>
       </div>
+
       <!-- Кнопки Registration та START -->
       <div class="registration-wrapper">
         <div class="registration">Registration</div>
@@ -183,8 +134,10 @@
       <div class="start-wrapper">
         <div class="registration">START</div>
       </div>
-      <img class="iphone-15-icon" alt="iPhone 15" src="../public/iphone-15@2x.png">
-      <!-- Додаткові елементи -->
+      
+      <img class="iphone-15-icon" alt="" src="../public/iphone-15@2x.png">
+      
+      <!-- Інші елементи -->
       <button id="registration">Registration</button>
       <button id="start">START</button>
       <div class="for-begginers-thanks-container">
@@ -217,59 +170,83 @@
         <p class="welcome-to-victory">pakistanasiafb.velfora.com</p>
       </div>
     </div>
-    <!-- Футер з іконками соцмереж (як на сторінці Інструкції) -->
+    <!-- Футер з іконками соцмереж -->
     <footer class="footer">
       <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank">
-        <img class="social-icon" src="../public/mingcutetelegramfill.svg" alt="Telegram">
+        <img class="social-icon" src="../public/mingcutetelegramfill.svg" alt="Telegram" />
       </a>
       <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank">
-        <img class="social-icon" src="../public/basilinstagramsolid.svg" alt="Instagram">
+        <img class="social-icon" src="../public/basilinstagramsolid.svg" alt="Instagram" />
       </a>
     </footer>
   </div>
   
-  <!-- Бургер-меню (зліва) -->
-  <div class="menu" id="menu">
-    <div class="close-btn" id="menuClose">×</div>
-    <div class="menu-inner">
+  <!-- Popup overlay з меню -->
+  <div id="menuContainer" class="popup-overlay">
+    <div class="menu">
+      <div class="close-btn">&times;</div>
+      
+      <!-- Клікабельні пункти меню -->
+      <a class="instructions" href="/Instructions/instructions.html">Instructions</a>
+      <a class="contacts" id="popupcontactsText" href="../contacts/contacts.html">Contacts</a>
+      <div class="results">Results</div>
+      <div class="forecasts">Forecasts</div>
+      <div class="start1">Start</div>
+      
+      <!-- Логотип як пункт меню -->
       <div class="victory-vibes-container">
-        <!-- "Victory Vibes" в один рядок -->
-        <div class="victory-vibes1" style="white-space: nowrap;">Victory Vibes</div>
+        <div class="victory-vibes1">Victory Vibes</div>
+      </div>
+      
+      <!-- Іконки соцмереж -->
+      <div class="social-icons">
+        <a href="https://t.me/+fLBJs5it6zFmM2Uy" target="_blank">
+          <img class="mingcutetelegram-fill-icon" alt="Telegram" src="../public/mingcutetelegramfill.svg">
+        </a>
+        <a href="https://www.instagram.com/v1ctory_v1bes/" target="_blank">
+          <img class="basilinstagram-solid-icon1" alt="Instagram" src="../public/basilinstagramsolid.svg">
+        </a>
       </div>
     </div>
-    <!-- Абсолютно позиційовані пункти меню -->
-    <a class="instructions" href="../instructions/instructions.html">Instructions</a>
-    <a class="contacts" href="../contacts/contacts.html">Contacts</a>
-    <div class="results">Results</div>
-    <div class="forecasts">Forecasts</div>
-    <div class="start1">Start</div>
-    <!-- Іконки соцмереж -->
-    <img class="mingcutetelegram-fill-icon" alt="Telegram" src="../public/mingcutetelegramfill.svg">
-    <img class="basilinstagram-solid-icon1" alt="Instagram" src="../public/basilinstagramsolid.svg">
   </div>
   
   <!-- JS для бургер-меню -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const burgerIcon = document.getElementById("burgerIcon");
-      const menu = document.getElementById("menu");
-      const closeBtn = document.getElementById("menuClose");
-      if (burgerIcon && menu && closeBtn) {
-        burgerIcon.addEventListener("click", () => {
-          menu.classList.toggle("active");
-        });
-        closeBtn.addEventListener("click", () => {
-          menu.classList.remove("active");
-        });
+      const hamburger = document.getElementById("vectorIcon");
+      const menuOverlay = document.getElementById("menuContainer");
+      const menu = menuOverlay.querySelector(".menu");
+      const closeBtn = menu.querySelector(".close-btn");
+
+      if (!hamburger || !menuOverlay || !menu || !closeBtn) {
+        console.error("❌ Error: One of the elements was not found!");
+        return;
       }
+
+      hamburger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menuOverlay.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menuOverlay.classList.remove("active");
+      });
+
+      menuOverlay.addEventListener("click", function(e) {
+        if (!menu.contains(e.target)) {
+          menuOverlay.classList.remove("active");
+        }
+      });
     });
   </script>
   
-  <!-- JS для кнопок Registration та START -->
+  <!-- JS для кнопок -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var registrationBtn = document.querySelector(".registration-wrapper .registration");
       var startBtn = document.querySelector(".start-wrapper .registration");
+
       if (registrationBtn) {
         registrationBtn.addEventListener("click", function() {
           window.location.href = "http://pakistanasiafb.velfora.com";
@@ -280,6 +257,7 @@
           window.location.href = "http://pakistanasiafb.velfora.com";
         });
       }
+      
       var burgerStart = document.querySelector(".menu .start1");
       if (burgerStart) {
         burgerStart.addEventListener("click", function() {
