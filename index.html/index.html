@@ -72,20 +72,14 @@
     
     /* Футер, як на інших сторінках */
     .footer {
-      background-color: var(--color-footer);
-      padding: 10px 16px;
-      display: flex;
-      justify-content: flex-start;
-      gap: 20px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-    .social-icon {
-      width: 24px;
-      height: 24px;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 440px; /* фіксована ширина як у макета */
+  background-color: var(--color-footer);
+  padding: 10px 16px;
+  z-index: 90;
+}
     
     /* Мобільна адаптація */
     @media (max-width: 768px) {

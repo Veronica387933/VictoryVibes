@@ -21,6 +21,7 @@
 }
 
 .group-wrapper {
+  margin-left: 15px;
   height: 36px;
   display: flex;
   align-items: center;
@@ -36,7 +37,7 @@
   font-size: 36px;
 }
 
-/* Original styles */
+/* Main content */
 .div {
   position: absolute;
   top: 0%;
@@ -57,7 +58,6 @@
   line-height: 0.9;
 }
 
-/* Для заголовків залишаємо зменшений line-height */
 .welcome-to-victory-container {
   position: absolute;
   top: 72px;
@@ -84,59 +84,79 @@
   line-height: 0.9;
 }
 
-.follow-the-link-container,
-.after-registering-log-container,
-.join-us-and-container,
-.place-bets-that-container {
-  line-height: normal;
-}
-
-.registration {
-  position: relative;
-  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
-}
-
+/* Button styles */
 .registration-wrapper {
   position: absolute;
   top: 166px;
   left: 183px;
-  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: var(--br-31xl);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #29292d;
-  border: 1px solid var(--miscellaneous-keyboard-accessory-bar-selection);
-  box-sizing: border-box;
   width: 100px;
   height: 38px;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-radius: var(--br-31xl);
+  background: linear-gradient(45deg, #4BA298, #2c6d66);
+  border: none;
+  box-shadow: 0 4px 15px rgba(75, 162, 152, 0.3),
+              0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(75, 162, 152, 0.4),
+              0 4px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #55b8ac, #337973);
+}
+
+.registration-wrapper:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(75, 162, 152, 0.3);
+}
+
+.registration {
+  position: relative;
   font-size: var(--font-size-5xl);
   color: var(--color-white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .start-wrapper {
   position: absolute;
   top: 911px;
   left: calc(50% - 83.5px);
-  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: var(--br-31xl);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #29292d;
-  border: 1px solid var(--miscellaneous-keyboard-accessory-bar-selection);
-  box-sizing: border-box;
   width: 179px;
   height: 38px;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: var(--font-size-5xl);
-  color: var(--color-white);
+  border-radius: var(--br-31xl);
+  background: linear-gradient(45deg, #4BA298, #2c6d66);
+  border: none;
+  box-shadow: 0 4px 15px rgba(75, 162, 152, 0.3),
+              0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
+.start-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(75, 162, 152, 0.4),
+              0 4px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #55b8ac, #337973);
+}
+
+.start-wrapper:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(75, 162, 152, 0.3);
+}
+
+/* Content sections */
 .iphone-15-icon {
   position: absolute;
   top: 173px;
@@ -220,6 +240,7 @@
   height: 74px;
 }
 
+/* Layout elements */
 .frame-parent {
   position: absolute;
   top: 0px;
@@ -258,19 +279,20 @@
   font-family: var(--font-jomhuria);
 }
 
+/* Menu styles */
 .victory-vibes1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   color: var(--color-cadetblue);
   font-family: var(--font-jomhuria);
   font-size: 24px;
-  position: absolute;
-  top: 54px;
-  left: 10px;
 }
 
 .victory-vibes-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 54px;
+  left: 10px;
   width: auto;
   height: 24px;
 }
@@ -284,7 +306,19 @@
   font-family: var(--font-jomhuria);
 }
 
-/* Меню пункти - оновлені відступи відносно лого */
+.vector-icon1 {
+  position: absolute;
+  height: 1.41%;
+  width: 5.36%;
+  top: 5.07%;
+  right: 4.64%;
+  bottom: 93.53%;
+  left: 90%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
 .instructions {
   position: absolute;
   top: 96px;
@@ -316,6 +350,7 @@
   top: 304px;
   left: 10px;
 }
+
 .mingcutetelegram-fill-icon {
   position: absolute;
   top: 359px;
@@ -335,11 +370,11 @@
 }
 
 .menu {
-  width: 250px; /* оригінальна ширина */
+  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* повна висота екрану */
+  height: 100vh;
   background-color: #1d1d20;
   overflow-y: auto;
   z-index: 1001;
@@ -347,24 +382,40 @@
   color: var(--color-white);
   font-family: var(--font-jost);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 440px;
+  background-color: var(--color-footer);
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  z-index: 90;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
 }
 
 /* Media queries */
-@media screen and (max-width: 480px) {
-  .general {
+@media screen and (max-width: 440px) {
+  .vector-parent,
+  .footer {
     width: 100%;
-    height: auto;
   }
 
   .frame-parent {
-    width: 100%;
-    left: 0;
-    height: auto;
-    padding-bottom: 60px;
-  }
-
-  .vector-parent {
     width: 100%;
     left: 0;
   }
@@ -372,130 +423,16 @@
   .photo-2025-01-24-173110-1 {
     width: 100%;
     left: 0;
-    height: auto;
   }
 
   .welcome-to-victory-container {
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: calc(var(--font-size-17xl) * 0.8);
-  }
-
-  .registration-wrapper,
-  .start-wrapper {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .iphone-15-icon {
-    width: 180px;
-    height: auto;
-    left: 10px;
   }
 
   .for-begginers-thanks-container {
-    left: auto;
     right: 10px;
     width: 45%;
-    font-size: calc(var(--font-size-17xl) * 0.8);
   }
-
-  .step-1,
-  .step-2,
-  .step-3 {
-    left: 20px;
-  }
-
-  .follow-the-link-container,
-  .join-us-and-container,
-  .after-registering-log-container,
-  .place-bets-that-container {
-    width: calc(100% - 80px);
-    left: 60px;
-  }
-
-  .menu {
-    width: 250px;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .general {
-    width: 100%;
-  }
-
-  .frame-parent {
-    width: 100%;
-    left: 0;
-  }
-
-  .photo-2025-01-24-173110-1 {
-    width: 100%;
-    left: 0;
-  }
-
-  .welcome-to-victory-container {
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .registration-wrapper,
-  .start-wrapper {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .iphone-15-icon {
-    left: 40px;
-  }
-
-  .for-begginers-thanks-container {
-    right: 40px;
-    width: 45%;
-  }
-}
-
-/* Footer fix */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-/* Menu improvements */
-.menu.active {
-  left: 0;
-  transition: left 0.3s ease-in-out;
-}
-
-.close-btn {
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Interactive elements */
-.registration-wrapper,
-.start-wrapper,
-.burger-icon {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.registration-wrapper:hover,
-.start-wrapper:hover {
-  transform: scale(1.05);
-}
-
-.burger-icon:hover {
-  transform: scale(1.1);
 }
